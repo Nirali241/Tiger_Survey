@@ -33,9 +33,9 @@ function Choice({
     alert("question added");
   };
   return (
-    <div class="container">
-      <img class="logo_image" src={logo} alt=""></img>
-      <div class="sub_container">
+    <div className="container">
+      <img className="logo_image" src={logo} alt=""></img>
+      <div className="sub_container">
         <select
           value={dropdown}
           onChange={(e) => {
@@ -47,10 +47,10 @@ function Choice({
           <option value="2">Single-select</option>
         </select>
       </div>
-      <div class="selected_container">
+      <div className="selected_container">
         {dropdown === "1" && (
-          <div class="first_option">
-            <div class="question">
+          <div className="first_option">
+            <div className="question">
               <div>
                 <button>?</button>
                 <input
@@ -60,7 +60,7 @@ function Choice({
                 ></input>
               </div>
             </div>
-            <div class="option_container">
+            <div className="option_container">
               <h4>Options</h4>
               {additem.map((item) => {
                 return (
@@ -92,19 +92,19 @@ function Choice({
                 </div>
               )}
             </div>
-            <div class="ss"></div>
-            <div class="button_container">
+            <div className="ss"></div>
+            <div className="button_container">
               {additem.length === 4 && (
                 <div>
                   <button
-                    class="button_publish"
+                    className="button_publish"
                     onClick={handleAddQue1}
                     // onClick={() => setOption1(additem)}
                   >
                     Add Question
                   </button>
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <button class="button_publish" onClick={handleClick}>
+                  <button className="button_publish" onClick={handleClick}>
                     Publish
                   </button>
                 </div>
@@ -113,8 +113,8 @@ function Choice({
           </div>
         )}
         {dropdown === "2" && (
-          <div class="first_option">
-            <div class="question">
+          <div className="first_option">
+            <div className="question">
               <div>
                 <button>?</button>
                 <input
@@ -124,7 +124,7 @@ function Choice({
                 ></input>
               </div>
             </div>
-            <div class="option_container">
+            <div className="option_container">
               <h4>Options</h4>
               {secondadditem.map((item) => {
                 return (
@@ -158,19 +158,19 @@ function Choice({
                 </div>
               )}
             </div>
-            <div class="ss"></div>
-            <div class="button_container">
+            <div className="ss"></div>
+            <div className="button_container">
               {secondadditem.length === 2 && (
                 <div>
                   <button
-                    class="button_publish"
+                    className="button_publish"
                     onClick={handleAddQue2}
                     // onClick={() => setOption2(secondadditem)}
                   >
                     Add Question
                   </button>
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <button class="button_publish" onClick={handleClick}>
+                  <button className="button_publish" onClick={handleClick}>
                     Publish
                   </button>
                 </div>
